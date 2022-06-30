@@ -1,3 +1,572 @@
+/*police d'ecriture*/
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=sap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 0 0;
+    box-sizing: border-box;
+}
+/* body*/
+body {
+  font-family:'Roboto', sans-serif;
+  font-size: 100%;
+  text-decoration: none;
+} 
+.page {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.animation {
+  position: fixed;
+  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  inset: 0;
+  z-index:1 ;
+  opacity: 0.9;
+  animation: anim 3s ;
+  animation-fill-mode: forwards;
+}
+.fa-spinner{
+  color:#ff79da;
+  animation: spin 2s;
+  animation-iteration-count: 2px;
+}
+@keyframes spin{
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes anim {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+header {
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+header a {  /* petite flèche */
+  font-size: 1.2rem;
+  position: absolute;
+  left: 20px;
+  line-height: 34px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+section {
+  padding: 15px; 
+}
+.write {
+    color: white;
+}
+.ville {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background-color: #eaeaea;
+    box-shadow: 0 8px 5px -5px #cecece inset;
+}
+h2 {
+    margin: 20px 0;
+    text-align: left;
+    /* font-family:'Roboto', sans-serif; */
+}
+.reservez {
+  background-color: #f6f6f6;
+  padding: 50px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.reservez h3 {
+  color: #4d4d4d;
+  font-weight: 300;
+  text-align: center; 
+}
+.reservez h2 {
+text-align: center;
+}
+/* Bouton Explorer */
+.explorer {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px 30px 30px 30px;
+    background-image: linear-gradient(173deg, #ff79da, #9356dc);
+    border: none;
+    box-shadow: 0 5px 5px #cecece;
+    margin: 40px 0;   
+}
+.explorer:hover {
+    background-image: linear-gradient(173deg, #ff93e1, #a16be0);
+    box-shadow: 0 8px 8px #b7b7b7;
+}
+/*fonctionnement*/
+.fonctionnement {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.fonctionnement h2 {
+    margin: 40px 0;
+}
+.chiffre {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 25px;
+  height: 25px;
+  background-color: #9356dc;
+  border-radius: 100%;
+  color: white;
+  position: absolute;
+  top: 23px;
+  left: -12px;  
+}
+.bouton-fonctionnement {
+    width: 325px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 8px 5px 5px #eaeaea;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #f6f6f6;
+    font-size: 16px;
+    font-family:'Roboto', sans-serif;
+}
+.bouton-fonctionnement:hover {
+    background-color: #f5edff;
+    box-shadow: 0 8px 8px #b7b7b7;
+}
+.bouton-fonctionnement:hover .fas {
+    color: #9356dc;
+}
+.bouton-fonctionnement .contenu {
+  display:flex;
+  align-items: center;
+  height: 100%;
+}
+.bouton-fonctionnement .contenu div {
+  width: 80px;
+  width: 74px;
+  padding-left: 34px;
+}
+.bouton-fonctionnement .fas {
+  color: #7e7e7e;
+  margin-right: 1.5rem; 
+}
+ /*Restaurants*/
+  .partie3 {
+    background-color: #f6f6f6;
+    padding-top:20px;
+    padding-bottom: 60px;
+}
+.img1 {
+  background-image: url("./images/restaurants_page1/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size:  100%;
+  background-repeat: no-repeat;
+  width: 325px;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+.img2 {
+    background-image: url("./images/restaurants_page1/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-size:  100%;
+    background-repeat: no-repeat;
+    width: 325px;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+}
+.img3 {
+    background-image: url("./images/restaurants_page1/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-size:  100%;
+    background-repeat: no-repeat;
+    top:20px;
+    width: 325px;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+}
+.img4 {
+    background-image: url("./images/restaurants_page1/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-size:  100%;
+    background-repeat: no-repeat;
+    width: 325px;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+}
+.block-restaurants {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.cube-restaurant {
+  display: inline-block;
+  background-color: white;
+  position: relative;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 325px;
+  height: 230px;
+  box-shadow: 0px 0px 8px 0px #d7cfcf;
+}
+.Nouveau {
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  color: #078464;
+  border: none;
+  height: 2rem;
+  width: 6rem;
+  position:relative;
+  background-color: #99e2d0;
+  margin-left: 220px;
+  top: 20px;
+}
+.les-restaurants { 
+  display:flex;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+/*footer*/
+.footer {
+  background-color: #4d4d4d;
+  font-family: 'Roboto', sans-serif;
+  padding-top:20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  }
+.titre {
+  font-family: 'shrikhand', sans-serif;
+  font-size: 20px;
+}
+li {
+  list-style: none;
+  margin-top: 15px;
+}
+.fa-utensils {
+  margin-right: 20px;
+} 
+.fa-handshake-angle {
+ margin-right: 15px;
+}
+                          /* css d'autre page */
+.titre2 {
+  font-family: 'shrikhand', sans-serif;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding-right: 120px;
+  padding-top: 2px;
+}
+.img-a-la-française {
+  background-image: url("./images/restaurants_page2/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height:300px;
+}
+.img-le-delice-des-sens {
+  background-image: url("./images/restaurants_page2/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height:300px;
+}
+.img-La-palette-du-gout{
+  background-image: url("./images/restaurants_page2/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size:  100%;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.img-La-note-enchantee {
+  background-image: url("./images/restaurants_page2/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size:  100%;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.menu-restaurant {
+  background-color: #f6f6f6;
+  border-radius: 35px 35px 0 0;
+  margin-top: -100px;
+  padding:10px 15px 75px 15px;
+} 
+.presentation {
+  font-family:'Roboto', sans-serif;
+  color: #4d4d4d;
+  font-weight: 400;
+}
+.nom-resto {
+  font-family: 'Shrikhand', sans-serif;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+/*Coeurs*/  
+.fa-heart {
+  font-size: 1.3rem;
+  position: relative;
+  transition-duration: 0.5s;
+}
+.solid-fa-heart {
+  color: transparent;
+  font-size: 1.3rem;
+  background-image: linear-gradient(173deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left :0;
+  transition-duration: 0.5s;
+}
+.cube-restaurant:hover .solid-fa-heart,
+.menu-restaurant:hover .solid-fa-heart {
+  opacity: 1;
+}
+.cube-restaurant:hover .fa-regular.fa-heart,
+.menu-restaurant:hover .fa-regular.fa-heart {
+  color: #fff;
+}
+.entrees-resto {
+  background:transparent;
+  width: 40px;
+  border-bottom:3px solid;
+  border-color: #99e2d0;
+}
+/*regroupe les block: entrees plats dessert*/
+.big-block {
+  display: flex;
+  align-items:flex-end;
+  flex-direction:row;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition-duration: 1s;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+.block {
+  background:white;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  box-shadow: 3px 3px 3px 3px #efe8e8;
+  border-radius: 15px;
+  transition-duration: 1s;
+  overflow: hidden;
+  
+ }
+ .block2/*pour les deux phrase de chque menu*/ {
+  background-color: transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 70%;
+  height: 3rem;
+  padding-left: 10px;
+}
+/*pour les deux phrase de chque menu*/
+.block h3 {
+  text-overflow: ellipsis; 
+}
+ .block h3 {
+  text-overflow: ellipsis;
+}
+.prix /* pour le prix */ {
+  background-color: transparent;
+  width: 32px;
+  height: 2.8rem;
+  margin-right: 10px;
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items:flex-end;
+  justify-content: flex-end;
+}
+/*bolock menu et l'animation à l'interieur*/
+
+.small-block/*pour l'animation*/ {
+  background-color: hsl(165, 56%, 74%);
+  border-radius: 0px 15px 15px 0px;
+  width: 60px;
+  height: 70px;
+  margin-right:-60px;
+  display:grid;
+  place-items: center;
+  transition-duration: 0.5s;
+}
+.fa-check {
+  background:white;
+  color: #99e2d0;
+  border-radius: 100%;
+  width: 1.3rem;
+  aspect-ratio: 1;
+  display:grid;
+  place-items: center;
+}
+.block:hover .small-block {
+  margin-right: 0;
+  cursor: pointer
+}
+.block h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.block h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.block:hover i {
+  animation-name: move;
+  animation-duration: 0.5s;
+  animation-iteration-count:initial;
+} 
+@keyframes move {
+    0% {
+    transform: rotate(-300deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+   /*animation des block*/
+  @keyframes appearance {
+   0% {
+     transform: translatey(30px);
+     opacity: 0;
+   }
+   100%{
+    transform:translatey(0);
+    opacity: 1;
+  } 
+}
+.block-1 {
+  animation: appearance 300ms both;
+  animation-delay: 200ms;
+}
+.block-2 {
+  animation: appearance 300ms both;
+  animation-delay: 400ms;
+}
+.block-3 {
+  animation: appearance 300ms both;
+  animation-delay: 600ms;
+}
+.block-4 {
+  animation: appearance 300ms both;
+  animation-delay: 800ms;
+}
+.block-5 {
+  animation: appearance 300ms both;
+  animation-delay: 1000ms;
+}
+.block-6 {
+  animation: appearance 300ms both;
+  animation-delay: 1200ms;
+}
+.block-7 {
+  animation: appearance 300ms both;
+  animation-delay: 1400ms;
+}
+.block-8 {
+  animation: appearance 300ms both;
+  animation-delay: 1600ms;
+}
+.block-9 {
+  animation: appearance 300ms both;
+  animation-delay: 1800ms;
+}
 
 
-/*# sourceMappingURL=style.css.map */
+
+
+
+
+.commander {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 30px 30px 30px 30px;
+  color: white;
+  cursor: pointer;
+  background-image: linear-gradient(173deg, #ff79da, #9356dc);
+  box-shadow: 0 5px 5px #cecece;
+  margin: 0 auto;
+}
+.commander:hover {
+  background-image: linear-gradient(173deg, #ff93e1, #a16be0);
+  box-shadow: 0 8px 8px #b7b7b7;
+}
+.bordure {
+  border: solid 0px rgb(245, 238, 238);
+}
+.width {
+  width: 100%;
+}
+@media all and (min-width: 700px) {
+  .width {
+     width: 50%;
+     padding: 0 5px;
+  }
+  .block2 {
+    width: 60%;
+  }
+}
+@media all and (min-width: 1000px) {
+  .width {
+    width: 33.33%;
+    padding: 0 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+  
